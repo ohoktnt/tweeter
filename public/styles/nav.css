@@ -1,0 +1,39 @@
+/* navbar */
+
+nav {
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  position: top;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5em;
+}
+
+.logo {
+  align-self: center;
+}
+
+.newtweet-group {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 70px;
+}
+
+.newtweet {
+  font-size: medium;
+  margin-bottom: 0;
+}
+
+.arrow {
+  display: flex;
+  color: red;
+  margin-top: 0;
+  font-weight: bold;
+  padding-left: 50px;
+  transform: rotate(90deg);
+}
