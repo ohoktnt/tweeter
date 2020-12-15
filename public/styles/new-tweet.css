@@ -8,6 +8,10 @@
   width: 100%;
 }
 
+h2 {
+  align-self: flex-start;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -22,6 +26,10 @@ textarea {
   border-bottom: solid;
   height: 36px;
   resize: none;
+}
+
+textarea:focus {
+  outline: 0;
 }
 
 .form-bottom {
