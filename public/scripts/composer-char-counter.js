@@ -10,7 +10,4 @@ $(document).ready(function () {
       $(this).siblings().children('.counter').removeClass('negative')
     }
   })
-
 });
-
-

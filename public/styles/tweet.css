@@ -3,14 +3,45 @@
 .tweet {
   display: flex;
   flex-direction: column;
+  border: solid black;
+  margin-top: 50px;
 }
 
-.tweet header {
+article.tweet:hover{
+  box-shadow: 10px 10px rgb(174, 177, 204);
+}
+
+.tweet div {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding:20px;
+  height: 4em;
+}
+
+.tweet h2 {
+  margin: 0px;
+  margin-bottom: 10px;;
+}
+
+.userID {
+  color: rgb(175, 175, 175);
+}
+
+.tweet p {
+  width: 95%;
+  align-self: center;
+  border-bottom: solid;
+  padding: 10px;
+  margin: 0px;
 }
 
 .tweet footer {
   display: flex;
+  justify-content: space-between;
+}
 
+.fas {
+  padding-left: 10px;
 }
 

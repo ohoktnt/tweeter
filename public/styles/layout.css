@@ -39,6 +39,6 @@ nav {
   justify-content: space-evenly;
   align-self: center;
   flex-direction: column;
-  border-style: dashed;
-  border-color: red;
+  /* border-style: dashed;
+  border-color: red; */
 }
