@@ -32,6 +32,10 @@ textarea:focus {
   outline: 0;
 }
 
+.negative {
+  color: red;
+}
+
 .form-bottom {
   display:flex;
   justify-content: space-between;
