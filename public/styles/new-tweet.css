@@ -1,0 +1,37 @@
+/* new-tweet */
+
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f1ec;
+  width: 100%;
+  font-weight: bold;
+}
+
+textarea {
+  border-style: none;
+  background: #f4f1ec;
+  border-bottom: solid;
+  height: 36px;
+  resize: none;
+}
+
+.form-bottom {
+  display:flex;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive, sans-serif;
+  padding-top: 10px;
+}
+
+button {
+  background-color: #4056A1;
+  color: #FFFFFF;
+}
