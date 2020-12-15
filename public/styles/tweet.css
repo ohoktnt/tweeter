@@ -1,0 +1,16 @@
+/* tweet style*/
+
+.tweet {
+  display: flex;
+  flex-direction: column;
+}
+
+.tweet header {
+  display: flex;
+}
+
+.tweet footer {
+  display: flex;
+
+}
+
