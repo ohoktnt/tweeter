@@ -79,20 +79,32 @@ $(document).ready(function () {
     // const tweetText = $tweet.val();
     console.log($tweet)
     
-    // getTweets($tweet)
+    // Create AJAX request
+    $.ajax({
+      method: 'POST',
+      url: 'http://localhost:8080/tweets',
+      data: $tweet
+    })
+      .done(function () {
+        console.log('ajax data sent?')
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+    
 
     $(this).children('textarea').val('');
   })
   
-  // const getTweets = (data) => {
+  // const addTweet = (data) => {
   //   // Create an AJAX request 
   //   $.ajax({
   //     method: 'POST',
-  //     url: '../server/data-files/intial-tweets.json'
+  //     url: 'http://localhost:8080'
   //   })
   //     .then((result) => {
+  //       console.log(data)
   //       console.log(result);
-  //       renderTweets(result);
   //     })
   //     .catch((err) => console.log(err))
   // }    
