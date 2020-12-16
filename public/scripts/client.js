@@ -6,6 +6,13 @@
 
 
 $(document).ready(function () {
+  
+  // Cross-Site Scripting Prevention
+  const escape = function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
 
   renderTweets = function(tweetArr) {
     // to eliminate duplicates
@@ -30,7 +37,7 @@ $(document).ready(function () {
         <h3 class="userID">${tweetObj.user.handle}</h3>
       </div>
     </header>
-    <p>${tweetObj.content.text}</p>
+    <p>${escape(tweetObj.content.text)}</p>
     <footer>
       <div>${date}</div>
       <div class="icons"><i class="fas fa-flag"></i>  <i class="fas fa-retweet"></i> <i class="fas fa-heart"></i></div>
@@ -58,6 +65,8 @@ $(document).ready(function () {
     // const tweetText = $tweet.val();
     console.log($tweet)
     
+    
+
     // form validation
     const counter = Number($(this).children('div').children('output').val())
     console.log(counter);
