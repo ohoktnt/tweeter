@@ -16,14 +16,15 @@ article.tweet:hover{
 .tweet div {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   padding:20px;
   height: 4em;
 }
 
-.tweet h2 {
-  margin: 0px;
-  margin-bottom: 10px;;
+.tweet div h3 {
+  padding-bottom: 50px;
+  margin-top: 0px;
+  padding-right: 10px;
 }
 
 .userID {
