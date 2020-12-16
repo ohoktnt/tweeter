@@ -39,7 +39,7 @@ $(document).ready(function () {
       // calls createtweet elemnt for each tweet
       const $tweet = createTweetElement(tweet);
       // takes return value and appends it to the tweets container
-      $('#tweets-container').append($tweet);
+      $('#tweets-container').prepend($tweet);
     }
   }
   
@@ -67,8 +67,10 @@ $(document).ready(function () {
     return date;
   }
   
-  renderTweets(data)
+  // renderTweets(data)
   
+
+  // adding New Tweets
   // will collect information from form
   $('#new-tweet-form').on("submit", function(event) {
     // stop the form from being submitted
@@ -92,22 +94,27 @@ $(document).ready(function () {
         console.log(err)
       })
     
-
     $(this).children('textarea').val('');
   })
   
-  // const addTweet = (data) => {
-  //   // Create an AJAX request 
-  //   $.ajax({
-  //     method: 'POST',
-  //     url: 'http://localhost:8080'
-  //   })
-  //     .then((result) => {
-  //       console.log(data)
-  //       console.log(result);
-  //     })
-  //     .catch((err) => console.log(err))
-  // }    
+  loadTweets = function() {
+    // make request to /tweets and recieve array of tweets as JSON
+    $.ajax({
+      method: 'GET',
+      url: 'http://localhost:8080/tweets'
+    })
+    // on sucess, call the renderTWeets function passing the response
+      .then((result) => {
+        console.log(result)
+        renderTweets(result)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+
+  }
+
+  loadTweets();
   
 })
 
