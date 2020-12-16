@@ -66,17 +66,18 @@ $(document).ready(function () {
     console.log($tweet)
     
     
-
     // form validation
+    $('#error').empty();
     const counter = Number($(this).children('div').children('output').val())
     console.log(counter);
     if(counter < 0) {
-      return alert("Oops! Your tweet content is too long!")
-    }
-    
-    if(counter === 140) {
-      return alert("Oops! Your tweet has not been entered!")
-    }
+      const message = "<p class='error'><i class='fas fa-exclamation-triangle'></i> Oops! Your tweet content is too long! <i class='fas fa-exclamation-triangle'></i></p>"
+      return $('#error').append(message)
+    } else if(counter === 140) {
+      const message = "<p class='error'><i class='fas fa-exclamation-triangle'></i> Oops! Your tweet does not have any characters!<i class='fas fa-exclamation-triangle'></i></p>"
+      return $('#error').append(message);
+    } 
+
 
 
     // Create AJAX request - for new tweet
@@ -93,7 +94,6 @@ $(document).ready(function () {
       .catch((err) => {
         console.log(err)
       })
-    
     $(this).children('textarea').val('');
     $(this).children('div').children('output').val('140');
   })

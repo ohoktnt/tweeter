@@ -48,3 +48,13 @@ button {
   background-color: #4056A1;
   color: #FFFFFF;
 }
+
+.error {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-right: 3em;
+  padding-left: 3em;
+  border: solid #F00;
+  color: #F00;
+}
+
