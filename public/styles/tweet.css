@@ -28,7 +28,12 @@ article.tweet:hover{
 
 .userID {
   color: #AFAFAF;
+  visibility: hidden;
   /* rgb(175, 175, 175) */
+}
+
+article.tweet:hover .userID {
+  visibility: visible;
 }
 
 .tweet p {
