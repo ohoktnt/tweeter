@@ -30,7 +30,6 @@ const data = [
   }
 ]
 
-
 renderTweets = function(tweetArr) {
   // loops through tweets
   for(let tweet of tweetArr) {
@@ -43,13 +42,10 @@ renderTweets = function(tweetArr) {
       $('#tweets-container').append($tweet);
     })
   }
-  
 }
 
 createTweetElement = function(tweetObj) {
   const date = createDate(tweetObj.created_at);
-
-
   const $tweet = $(`        
   <article class="tweet">
   <header>
@@ -71,7 +67,6 @@ createDate = function(milliseconds) {
   const date = new Date(milliseconds).toDateString();
   return date;
 }
-
 
 renderTweets(data)
 
