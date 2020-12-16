@@ -1,16 +1,16 @@
 /* navbar */
 
 nav {
-  height: 120px;
-  width: 100%;
-  background-color: #4056A1;
-  color: #FFFFFF;
-  position: fixed;
-  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  height: 120px;
+  width: 100%;
   padding: 1.5em;
+  color: #FFF;
+  background-color: #4056A1;
 }
 
 .logo {
@@ -21,8 +21,8 @@ nav {
   display: flex;
   flex-direction: column;
   align-content: flex-end;
-  font-family: 'Source Sans Pro', sans-serif;
   height: 70px;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .newtweet {
@@ -31,10 +31,9 @@ nav {
 }
 
 .arrow {
-  display: flex;
-  color: red;
   margin-top: 0;
-  font-weight: bold;
   padding-left: 50px;
   transform: rotate(90deg);
+  font-weight: bold;
+  color: #FF0000;
 }

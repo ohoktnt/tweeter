@@ -3,12 +3,14 @@
 .tweet {
   display: flex;
   flex-direction: column;
-  border: solid black;
   margin-top: 50px;
+  border: solid #000;
+  border-radius: 5px;
 }
 
 article.tweet:hover{
-  box-shadow: 10px 10px rgb(174, 177, 204);
+  box-shadow: 10px 10px #AEB1CC;
+  /* rgb(174, 177, 204) */
 }
 
 .tweet div {
@@ -25,15 +27,16 @@ article.tweet:hover{
 }
 
 .userID {
-  color: rgb(175, 175, 175);
+  color: #AFAFAF;
+  /* rgb(175, 175, 175) */
 }
 
 .tweet p {
-  width: 95%;
   align-self: center;
-  border-bottom: solid;
+  width: 95%;
   padding: 10px;
   margin: 0px;
+  border-bottom: solid;
 }
 
 .tweet footer {

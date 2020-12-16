@@ -16,17 +16,17 @@ h2 {
 form {
   display: flex;
   flex-direction: column;
-  background-color: #f4f1ec;
   width: 100%;
+  background-color: #F4F1EC;
   font-weight: bold;
 }
 
 textarea {
-  border-style: none;
-  background: #f4f1ec;
-  border-bottom: solid;
   height: 36px;
   resize: none;
+  border-style: none;
+  border-bottom: solid;
+  background: #F4F1EC;
 }
 
 textarea:focus {
@@ -34,14 +34,14 @@ textarea:focus {
 }
 
 .negative {
-  color: red;
+  color: #FF0000;
 }
 
 .form-bottom {
   display:flex;
   justify-content: space-between;
-  font-family: 'Bungee', cursive, sans-serif;
   padding-top: 10px;
+  font-family: 'Bungee', cursive, sans-serif;
 }
 
 button {
