@@ -81,6 +81,17 @@ $(document).ready(function () {
     // const tweetText = $tweet.val();
     console.log($tweet)
     
+    // form validation
+    const counter = Number($(this).children('div').children('output').val())
+    console.log(counter);
+    if(counter < 0) {
+      return alert("Oops! Your tweet content is too long!")
+    }
+    
+    if(counter === 140) {
+      return alert("Oops! Your tweet has not been entered!")
+    }
+
     // Create AJAX request
     $.ajax({
       method: 'POST',
@@ -89,12 +100,14 @@ $(document).ready(function () {
     })
       .done(function () {
         console.log('ajax data sent?')
+        loadTweets();
       })
       .catch((err) => {
         console.log(err)
       })
     
     $(this).children('textarea').val('');
+    $(this).children('div').children('output').val('140');
   })
   
   loadTweets = function() {
