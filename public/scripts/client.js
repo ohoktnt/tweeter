@@ -30,43 +30,73 @@ const data = [
   }
 ]
 
-renderTweets = function(tweetArr) {
-  // loops through tweets
-  for(let tweet of tweetArr) {
-    console.log(tweet)
-    // calls createtweet elemnt for each tweet
-    const $tweet = createTweetElement(tweet);
-    
-    // takes return value and appends it to the tweets container
-    $(document).ready(function () {
+$(document).ready(function () {
+
+  renderTweets = function(tweetArr) {
+    // loops through tweets
+    for(let tweet of tweetArr) {
+      console.log(tweet)
+      // calls createtweet elemnt for each tweet
+      const $tweet = createTweetElement(tweet);
+      // takes return value and appends it to the tweets container
       $('#tweets-container').append($tweet);
-    })
+    }
   }
-}
+  
+  createTweetElement = function(tweetObj) {
+    const date = createDate(tweetObj.created_at);
+    const $tweet = $(`        
+    <article class="tweet">
+    <header>
+      <div>
+        <h3><img src="${tweetObj.user.avatars}"> ${tweetObj.user.name}</h3>
+        <h3 class="userID">${tweetObj.user.handle}</h3>
+      </div>
+    </header>
+    <p>${tweetObj.content.text}</p>
+    <footer>
+      <div>${date}</div>
+      <div class="icons"><i class="fas fa-flag"></i>  <i class="fas fa-retweet"></i> <i class="fas fa-heart"></i></div>
+    </footer>
+  </article>`);
+    return $tweet;
+  }
+  
+  createDate = function(milliseconds) {
+    const date = new Date(milliseconds).toDateString();
+    return date;
+  }
+  
+  renderTweets(data)
+  
+  // will collect information from form
+  $('#new-tweet-form').on("submit", function(event) {
+    // stop the form from being submitted
+    event.preventDefault();
+    console.log('submit default stopped')
+    
+    const $tweet = $(this).children('textarea').serialize();
+    // const tweetText = $tweet.val();
+    console.log($tweet)
+    
+    // getTweets($tweet)
 
-createTweetElement = function(tweetObj) {
-  const date = createDate(tweetObj.created_at);
-  const $tweet = $(`        
-  <article class="tweet">
-  <header>
-    <div>
-      <h3><img src="${tweetObj.user.avatars}"> ${tweetObj.user.name}</h3>
-      <h3 class="userID">${tweetObj.user.handle}</h3>
-    </div>
-  </header>
-  <p>${tweetObj.content.text}</p>
-  <footer>
-    <div>${date}</div>
-    <div class="icons"><i class="fas fa-flag"></i>  <i class="fas fa-retweet"></i> <i class="fas fa-heart"></i></div>
-  </footer>
-</article>`);
-  return $tweet;
-}
+    $(this).children('textarea').val('');
+  })
+  
+  // const getTweets = (data) => {
+  //   // Create an AJAX request 
+  //   $.ajax({
+  //     method: 'POST',
+  //     url: '../server/data-files/intial-tweets.json'
+  //   })
+  //     .then((result) => {
+  //       console.log(result);
+  //       renderTweets(result);
+  //     })
+  //     .catch((err) => console.log(err))
+  // }    
+  
+})
 
-createDate = function(milliseconds) {
-  const date = new Date(milliseconds).toDateString();
-  return date;
-}
-
-renderTweets(data)
 
