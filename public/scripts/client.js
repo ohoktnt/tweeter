@@ -47,6 +47,9 @@ renderTweets = function(tweetArr) {
 }
 
 createTweetElement = function(tweetObj) {
+  const date = createDate(tweetObj.created_at);
+
+
   const $tweet = $(`        
   <article class="tweet">
   <header>
@@ -57,11 +60,16 @@ createTweetElement = function(tweetObj) {
   </header>
   <p>${tweetObj.content.text}</p>
   <footer>
-    <div>${tweetObj.created_at}</div>
+    <div>${date}</div>
     <div class="icons"><i class="fas fa-flag"></i>  <i class="fas fa-retweet"></i> <i class="fas fa-heart"></i></div>
   </footer>
 </article>`);
   return $tweet;
+}
+
+createDate = function(milliseconds) {
+  const date = new Date(milliseconds).toDateString();
+  return date;
 }
 
 
