@@ -10,13 +10,11 @@
 
 article.tweet:hover{
   box-shadow: 10px 10px #AEB1CC;
-  /* rgb(174, 177, 204) */
 }
 
 .tweet div {
   display: flex;
   justify-content: space-between;
-  /* align-items: flex-start; */
   padding: 1.5rem;
   height: 4em;
 }
@@ -27,11 +25,9 @@ article.tweet:hover{
   padding-right: 1em;
 }
 
-
 .userID {
   color: #AFAFAF;
   visibility: hidden;
-  /* rgb(175, 175, 175) */
 }
 
 article.tweet:hover .userID {
