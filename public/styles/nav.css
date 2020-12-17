@@ -43,7 +43,9 @@ nav {
 
 @media only screen and (max-width: 1023px) {
   nav {
-      background-color: #FFA84C;
+  background-color: #FFA84C;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  padding-bottom:  0;
+  height: 4rem;
   }
-}
+}   
