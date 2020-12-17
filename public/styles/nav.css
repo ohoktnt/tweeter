@@ -40,3 +40,10 @@ nav {
   font-size: 1.5rem;
   color: #FF0000;
 }
+
+@media only screen and (max-width: 1023px) {
+  nav {
+      background-color: #FFA84C;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  }
+}
