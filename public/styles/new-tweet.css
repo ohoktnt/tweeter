@@ -27,6 +27,7 @@ textarea {
   border-style: none;
   border-bottom: solid;
   background: #F4F1EC;
+  overflow-wrap: break-word;
 }
 
 textarea:focus {

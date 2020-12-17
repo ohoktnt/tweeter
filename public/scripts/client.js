@@ -79,7 +79,6 @@ $(document).ready(function () {
     } 
 
 
-
     // Create AJAX request - for new tweet
 
     $.ajax({
@@ -94,6 +93,7 @@ $(document).ready(function () {
       .catch((err) => {
         console.log(err)
       })
+
     $(this).children('textarea').val('');
     $(this).children('div').children('output').val('140');
   })
