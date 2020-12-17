@@ -26,6 +26,11 @@ $(document).ready(function () {
       $('#tweets-container').prepend($tweet);
     }
   }
+
+  // toggle new tweet button
+  $('.newtweet-group').on('click', function() {
+    $('.new-tweet').slideToggle('slow')
+  })
   
   createTweetElement = function(tweetObj) {
     const time = createTimeAgo(tweetObj.created_at);

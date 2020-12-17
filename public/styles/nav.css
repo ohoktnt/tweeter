@@ -45,7 +45,11 @@ nav {
   nav {
   background-color: #FFA84C;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-  padding-bottom:  0;
-  height: 4rem;
+  padding-bottom: 2.5em;
+  height: 5rem;
+  }
+
+  .logo {
+    padding-top: 1em;
   }
 }   

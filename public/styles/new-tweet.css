@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  /* border-style: dotted; */
+  margin-top: 2em;
 }
 
 h2 {
@@ -19,6 +19,10 @@ form {
   width: 100%;
   background-color: #F4F1EC;
   font-weight: bold;
+}
+
+form label {
+  font-size: 1.25em;
 }
 
 textarea {
