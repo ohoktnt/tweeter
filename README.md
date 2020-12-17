@@ -2,8 +2,10 @@
 
 A simple single-page AJAX-based Twitter clone that uses jQuery, HTML5 and plain ol' CSS3 to help web bootcamp students get comfortable with our front-end chops with those techonologies. 
 
-## Final Product
-
+## Screenshots
+!["Screenshot of Tweeter Desktop Version"](https://github.com/ohoktnt/tweeter/blob/master/docs/Tweeter-Desktop.png?raw=true)
+!["Screenshot of Tweeter Tablet Version"](https://github.com/ohoktnt/tweeter/blob/master/docs/Tweeter-Tablet.png?raw=true)
+!["Screenshot over Tweet hover state"](https://github.com/ohoktnt/tweeter/blob/master/docs/Tweeter-Hover.png?raw=true)
 
 
 ## Getting Started
