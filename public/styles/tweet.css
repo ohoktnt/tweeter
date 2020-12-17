@@ -3,7 +3,7 @@
 .tweet {
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 1.5em;
   border: solid #000;
   border-radius: 5px;
 }
@@ -17,15 +17,16 @@ article.tweet:hover{
   display: flex;
   justify-content: space-between;
   /* align-items: flex-start; */
-  padding:20px;
+  padding: 1.5rem;
   height: 4em;
 }
 
 .tweet div h3 {
-  padding-bottom: 50px;
-  margin-top: 0px;
-  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  padding-right: 1em;
 }
+
 
 .userID {
   color: #AFAFAF;
@@ -40,17 +41,18 @@ article.tweet:hover .userID {
 .tweet p {
   align-self: center;
   width: 95%;
-  padding: 10px;
-  margin: 0px;
+  padding: 0.5em;
+  margin: 0em;
   border-bottom: solid;
 }
 
 .tweet footer {
   display: flex;
   justify-content: space-between;
+  height: 3em;
 }
 
 .fas {
-  padding-left: 10px;
+  padding-left: 0.5em;
 }
 

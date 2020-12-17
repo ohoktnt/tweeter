@@ -5,17 +5,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 400px;
+  height: 22rem;
   width: 100%;
-  margin-top: 120px;
+  margin-top: 7rem;
   background-color: #FFA84C;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 }
 
 .profile {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .name {
-  margin-top: 0px;
+  margin: auto;
 }

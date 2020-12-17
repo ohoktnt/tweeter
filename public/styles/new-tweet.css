@@ -22,7 +22,7 @@ form {
 }
 
 textarea {
-  height: 36px;
+  height: 1.75em;
   resize: none;
   border-style: none;
   border-bottom: solid;
@@ -41,7 +41,7 @@ textarea:focus {
 .form-bottom {
   display:flex;
   justify-content: space-between;
-  padding-top: 10px;
+  padding-top: 0.5em;
   font-family: 'Bungee', cursive, sans-serif;
 }
 
@@ -51,8 +51,8 @@ button {
 }
 
 .error {
-  padding-bottom: 20px;
-  padding-top: 20px;
+  padding-bottom: 0.75em;
+  padding-top: 0.75em;
   padding-right: 3em;
   padding-left: 3em;
   border: solid #F00;

@@ -33,7 +33,7 @@ $(document).ready(function () {
     <article class="tweet">
     <header>
       <div>
-        <h3><img src="${tweetObj.user.avatars}"> ${tweetObj.user.name}</h3>
+        <h3><img src="${tweetObj.user.avatars}"> &ensp; ${tweetObj.user.name}</h3>
         <h3 class="userID">${tweetObj.user.handle}</h3>
       </div>
     </header>
@@ -53,6 +53,20 @@ $(document).ready(function () {
   
   // renderTweets(data)
   
+  // try jQuery slideup and slidedown for more dynamic
+  // $('#tweet-text').on('input', function() {
+  //   let charCount = $(this).val().length;
+  //   if(charCount < 0 && counter < 140) {
+  //     $('#error').empty().slideUp('fast');
+  //   } else if(charCount < 0) {
+  //     const message = "<p class='error'><i class='fas fa-exclamation-triangle'></i> Oops! Your tweet content is too long! <i class='fas fa-exclamation-triangle'></i></p>"
+  //     $('#error').append(message).slideDown('slow')
+  //   } else if(charCount > 140) {
+  //     const message = "<p class='error'><i class='fas fa-exclamation-triangle'></i> Oops! Your tweet does not have any characters!<i class='fas fa-exclamation-triangle'></i></p>"
+  //     return $('#error').append(message).slideDown('slow')
+  //   } 
+  // })
+
 
   // adding New Tweets
   // will collect information from form
@@ -65,11 +79,10 @@ $(document).ready(function () {
     // const tweetText = $tweet.val();
     console.log($tweet)
     
-    
     // form validation
     $('#error').empty();
     const counter = Number($(this).children('div').children('output').val())
-    console.log(counter);
+    // console.log(counter);
     if(counter < 0) {
       const message = "<p class='error'><i class='fas fa-exclamation-triangle'></i> Oops! Your tweet content is too long! <i class='fas fa-exclamation-triangle'></i></p>"
       return $('#error').append(message)
@@ -77,10 +90,9 @@ $(document).ready(function () {
       const message = "<p class='error'><i class='fas fa-exclamation-triangle'></i> Oops! Your tweet does not have any characters!<i class='fas fa-exclamation-triangle'></i></p>"
       return $('#error').append(message);
     } 
-
+    
 
     // Create AJAX request - for new tweet
-
     $.ajax({
       method: 'POST',
       url: 'http://localhost:8080/tweets',
