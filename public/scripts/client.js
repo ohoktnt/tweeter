@@ -28,7 +28,7 @@ $(document).ready(function () {
   }
   
   createTweetElement = function(tweetObj) {
-    const date = createDate(tweetObj.created_at);
+    const time = createTimeAgo(tweetObj.created_at);
     const $tweet = $(`        
     <article class="tweet">
     <header>
@@ -39,34 +39,35 @@ $(document).ready(function () {
     </header>
     <p>${escape(tweetObj.content.text)}</p>
     <footer>
-      <div>${date}</div>
+      <div>${time}</div>
       <div class="icons"><i class="fas fa-flag"></i>  <i class="fas fa-retweet"></i> <i class="fas fa-heart"></i></div>
     </footer>
   </article>`);
     return $tweet;
   }
-  
-  createDate = function(milliseconds) {
-    const date = new Date(milliseconds).toDateString();
-    return date;
-  }
-  
-  // renderTweets(data)
-  
-  // try jQuery slideup and slidedown for more dynamic
-  // $('#tweet-text').on('input', function() {
-  //   let charCount = $(this).val().length;
-  //   if(charCount < 0 && counter < 140) {
-  //     $('#error').empty().slideUp('fast');
-  //   } else if(charCount < 0) {
-  //     const message = "<p class='error'><i class='fas fa-exclamation-triangle'></i> Oops! Your tweet content is too long! <i class='fas fa-exclamation-triangle'></i></p>"
-  //     $('#error').append(message).slideDown('slow')
-  //   } else if(charCount > 140) {
-  //     const message = "<p class='error'><i class='fas fa-exclamation-triangle'></i> Oops! Your tweet does not have any characters!<i class='fas fa-exclamation-triangle'></i></p>"
-  //     return $('#error').append(message).slideDown('slow')
-  //   } 
-  // })
 
+  createTimeAgo = function(milliseconds) {
+    let now = Date.now()
+    const timePassed = now - milliseconds;
+    // 1 day ago
+    const daysPassed = Math.floor(timePassed/86400000)
+    if(daysPassed === 1) {
+      return `1 day ago`
+    }
+    // hours ago
+    if (daysPassed < 1) {
+      const hoursPassed = Math.floor(timePassed/3600000);
+
+    // mins ago
+      if (hoursPassed < 1) {
+        const minsPassed = Math.floor(timePassed/60000)
+        return `${minsPassed} mins ago`
+      }
+      return `${hoursPassed} hours ago`
+    }
+    // days ago
+    return `${daysPassed} days ago`;
+  }
 
   // adding New Tweets
   // will collect information from form
