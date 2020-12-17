@@ -30,6 +30,7 @@ $(document).ready(function () {
   // toggle new tweet button
   $('.newtweet-group').on('click', function() {
     $('.new-tweet').slideToggle('slow')
+    $('#new-tweet-form').children('textarea').focus();
   })
   
   createTweetElement = function(tweetObj) {

@@ -49,10 +49,9 @@ nav {
   body {
     flex-direction: row;
   }
-  
   main {
     margin: 2em;
-    margin-top: 8rem;
+    margin-top: 3.5rem;
     width: 5em;
   }
 
